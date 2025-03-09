@@ -18,18 +18,12 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           # 新版参数格式
-          output: github-snake.svg  # 直接生成到根目录
+          output: assets/github-snake.svg  # 直接生成到根目录
           # 有效参数列表：
           # github_user_name (必需)
           # github_token (可选，默认自动生成)
           # output (输出文件名)
           # args (直接传递 CLI 参数)
-
-      - name: Move to assets folder
-        run: |
-          mkdir -p assets
-          mv github-snake.svg assets/  # 手动移动文件到目录
-
       - name: Commit changes
         run: |
           git config --global user.name "github-actions"
