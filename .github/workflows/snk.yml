@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true  # 关键权限设置
 
       - name: Create assets directory
         run: mkdir -p assets  # 确保目录存在
