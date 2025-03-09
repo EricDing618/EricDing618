@@ -2,8 +2,8 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "30 6 * * *"  # 每天 UTC 时间 0 点自动运行
-  workflow_dispatch:      # 允许手动触发
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
   generate:
@@ -11,31 +11,33 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: true  # 关键权限设置
-
-      - name: Create assets directory
-        run: mkdir -p assets
+          persist-credentials: true
 
       - name: Generate Snake
         uses: platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
-          svg_path: assets/github-snake.svg
-          # 强制生成不同文件（即使没有新贡献）
-          density: 0.$(( ( RANDOM % 90 ) + 10 ))  # 随机密度参数
+          # 新版参数格式
+          output: github-snake.svg  # 直接生成到根目录
+          # 有效参数列表：
+          # github_user_name (必需)
+          # github_token (可选，默认自动生成)
+          # output (输出文件名)
+          # args (直接传递 CLI 参数)
 
-      - name: Debug check
-        run: ls -la assets/  # 调试查看文件生成状态
+      - name: Move to assets folder
+        run: |
+          mkdir -p assets
+          mv github-snake.svg assets/  # 手动移动文件到目录
 
       - name: Commit changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add assets/github-snake.svg
-          # 智能提交检测
           if git diff-index --quiet HEAD --; then
-            echo "No changes to commit"
+            echo "No changes"
           else
-            git commit -m "Update snake: $(date +'%Y-%m-%d %H:%M')"
+            git commit -m "Update snake"
             git push
           fi
