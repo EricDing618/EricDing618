@@ -18,11 +18,11 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           # 新版参数格式
-          output: assets/github-snake.svg  # 直接生成到根目录
+          outputs: assets/github-snake.svg  # 直接生成到根目录
           # 有效参数列表：
           # github_user_name (必需)
           # github_token (可选，默认自动生成)
-          # output (输出文件名)
+          # outputs (输出文件名)
           # args (直接传递 CLI 参数)
       - name: Commit changes
         run: |
