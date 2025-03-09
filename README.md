@@ -4,4 +4,6 @@ Hi，大家好！我是一名初中学生，很高兴认识你们，我会上传
 
 [![EricDing618's GitHub stats](https://github-readme-stats.vercel.app/api?username=EricDing618)](https://githubfast.com/EricDing618/github-readme-stats)  
 
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=Mogakamo&show_icons=true&count_private=true&theme=tokyonight)
+
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=EricDing618)](https://githubfast.com/EricDing618/github-readme-stats)
