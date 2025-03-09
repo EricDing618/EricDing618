@@ -2,8 +2,8 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "30 6 * * *" # 每天 UTC 时间 0 点运行
-  workflow_dispatch:    # 允许手动触发
+    - cron: "30 6 * * *"
+  workflow_dispatch:
 
 jobs:
   generate:
@@ -11,20 +11,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Create assets directory
+        run: mkdir -p assets  # 确保目录存在
+
       - name: Generate Snake
         uses: platane/snk@v3
         with:
-          github_user_name: ${{ github.repository_owner }} # 自动获取当前用户
-          svg_path: assets/github-snake.svg  # 生成的 SVG 保存路径
-          # 高级定制参数 (可选)：
-          # color: '...'       # 颜色代码 (默认绿色渐变)
-          # show_days: 90      # 显示天数
-          # density: 0.5       # 蛇的密度
+          github_user_name: ${{ github.repository_owner }}
+          svg_path: assets/github-snake.svg
 
       - name: Commit SVG
         run: |
-          git config --global user.name github-actions
-          git config --global user.email github-actions@github.com
-          git add assets/github-snake.svg
-          git commit -m "Update snake" || echo "No changes"
-          git push
+          # 添加文件存在性检查
+          if [ -f "assets/github-snake.svg" ]; then
+            git config --global user.name github-actions
+            git config --global user.email github-actions@github.com
+            git add assets/github-snake.svg
+            git commit -m "Update snake"
+            git push
+          else
+            echo "SVG file not found, skipping commit"
+          fi
