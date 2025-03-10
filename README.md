@@ -9,6 +9,6 @@ Hi，大家好！我是一名初中学生，很高兴认识你们，我会上传
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=EricDing618)](https://githubfast.com/EricDing618/github-readme-stats)
 
-[github-readme-streak-stats](https://github-readme-streak-stats.herokuapp.com/?user=EricDing618&hide_border=true&show_icons=true&sideLabels=56bcd9&sideNums=56bcd9&dates=56)
+[![github readme streak stats](https://github-readme-streak-stats.herokuapp.com/?user=EricDing618&hide_border=true&show_icons=true&sideLabels=56bcd9&sideNums=56bcd9&dates=56)]()
 
-[github-readme-activity-graph](https://github-readme-activity-graph.vercel.app/graph?username=EricDing618&bg_color=00000000&color=4F8CC9&line=599cab&point=99d1ce&area_color=2aa889&)
+[![github readme activity graph](https://github-readme-activity-graph.vercel.app/graph?username=EricDing618&bg_color=00000000&color=4F8CC9&line=599cab&point=99d1ce&area_color=2aa889&)]()
