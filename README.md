@@ -9,7 +9,7 @@ Hi，大家好！我是一名初中学生，很高兴认识你们，我会上传
 
 [![EricDing618's GitHub stats](https://github-readme-stats.vercel.app/api?username=EricDing618)](https://githubfast.com/EricDing618/github-readme-stats)  
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=EricDing618)](https://githubfast.com/EricDing618/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=EricDing618&layout=compact)](https://githubfast.com/EricDing618/github-readme-stats)
 
 [![github readme streak stats](https://github-readme-streak-stats.herokuapp.com/?user=EricDing618&hide_border=true&show_icons=true&sideLabels=56bcd9&sideNums=56bcd9&dates=56)]()
 
