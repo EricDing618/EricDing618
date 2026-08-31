@@ -1,5 +1,5 @@
 # 🎨EricDing618
-Hi，大家好！我是一名初中学生，很高兴认识你们，我会上传一些自己做的小作品，期待你们的支持与建议。🤗  
+Hi，大家好！我是一名中学生，很高兴认识你们，我会上传一些自己做的小作品，期待你们的支持与建议。🤗  
 <a href="https://space.bilibili.com/696034939" style="padding:8px 16px; background:blue; color:white; border-radius:5px; text-decoration:none">B站主页</a>
 
 [![GitHub WidgetBox](https://github-widgetbox.vercel.app/api/profile?username=EricDing618&data=followers,repositories,stars,commits)](https://github.com/Jurredr/github-widgetbox)
